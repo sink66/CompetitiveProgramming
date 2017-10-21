@@ -32,9 +32,25 @@ l4 = [i for i in l3 if not (i[2] == '青' and (i[3] != 'アッシュブロンド
 l5 = [i for i in l4 if not (i[2] != '青' and i[3] == 'アッシュブロンド')]
 
 # ４．ある者はＤと緑の目の人形の２つを持っている。
-# うまく行かない
-# 全探索する
-# どうやって？
+l6p = [i for i in l5 if not ((i[0] == 'Q' or i[0] == 'R') and (i[1] == 'D' or i[2] == '緑'))]
+l6q = [i for i in l5 if not ((i[0] == 'P' or i[0] == 'R') and (i[1] == 'D' or i[2] == '緑'))]
+l6r = [i for i in l5 if not ((i[0] == 'P' or i[0] == 'Q') and (i[1] == 'D' or i[2] == '緑'))]
+# l6p = [i for i in l5 if (i[0] == 'P' and (i[1] == 'D' or i[2] == '緑'))]
+# l6q = [i for i in l5 if (i[0] == 'Q' and (i[1] == 'D' or i[2] == '緑'))]
+# l6r = [i for i in l5 if (i[0] == 'R' and (i[1] == 'D' or i[2] == '緑'))]
 
-for i in l5:
+# ５．ある者はヘイゼルの目の人形と黒髪の人形の２つを持っている。
+l7p = [i for i in l5 if not ((i[0] == 'Q' or i[0] == 'R') and (i[2] == 'ヘイゼル' or i[2] == '黒'))]
+l7q = [i for i in l5 if not ((i[0] == 'P' or i[0] == 'R') and (i[2] == 'ヘイゼル' or i[2] == '黒'))]
+l7r = [i for i in l5 if not ((i[0] == 'P' or i[0] == 'Q') and (i[2] == 'ヘイゼル' or i[2] == '黒'))]
+# l7p = [i for i in l6p if (i[0] == 'P' and (i[2] == 'ヘイゼル' or i[2] == '黒'))]
+# l7q = [i for i in l6q if (i[0] == 'Q' and (i[2] == 'ヘイゼル' or i[2] == '黒'))]
+# l7r = [i for i in l6r if (i[0] == 'R' and (i[2] == 'ヘイゼル' or i[2] == '黒'))]
+
+
+for i in l7p:
+    print(i)
+for i in l7q:
+    print(i)
+for i in l7r:
     print(i)
