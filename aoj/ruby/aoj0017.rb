@@ -22,7 +22,7 @@ while line = gets
       ans.clear
       break
     end
-    # if ans.join.match?("/the|this|that/")
+    # if ans.join.match?(/the|this|that/)
     #   puts ans.join
     #   ans.clear
     #   break
