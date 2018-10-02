@@ -16,11 +16,17 @@ while line = gets
         ans << alphabet[num]
       end
     end
-    if ans.join.match("/the|this|that/") != nil
-      puts ans.join
+    result = ans.join
+    if result.include?("the") || result.include?("this") ||result.include?("that")
+      puts result
       ans.clear
       break
     end
+    # if ans.join.match?("/the|this|that/")
+    #   puts ans.join
+    #   ans.clear
+    #   break
+    # end
   end
 
 end
